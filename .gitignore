@@ -1,0 +1,25 @@
+# API Keys y secretos
+.env
+.env.*
+.env.local
+*.pem
+
+# Dependencias
+node_modules/
+
+# Build
+.next/
+out/
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Scripts de prueba
+test-*.js
+fix-*.js

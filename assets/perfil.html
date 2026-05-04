@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+  }
+  .profile {
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2d50 40%, #0d47a1 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(13,71,161,0.3);
+  }
+  .globe-ring {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border: 3px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+  }
+  .globe-ring:nth-child(2) {
+    width: 500px;
+    height: 500px;
+    border-color: rgba(255,255,255,0.05);
+  }
+  .globe-ring:nth-child(3) {
+    width: 300px;
+    height: 300px;
+    border-color: rgba(255,255,255,0.03);
+  }
+  .accent-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #f44336, transparent);
+    opacity: 0.6;
+  }
+  .accent-line.horizontal {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, transparent, #f44336, transparent);
+  }
+  .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+  .icon {
+    font-size: 80px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .title span {
+    color: #f44336;
+  }
+  .subtitle {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 22px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #f44336;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  .dot:nth-of-type(1) { top: 15%; left: 25%; }
+  .dot:nth-of-type(2) { top: 30%; right: 20%; width: 5px; height: 5px; }
+  .dot:nth-of-type(3) { bottom: 25%; left: 18%; width: 6px; height: 6px; }
+  .dot:nth-of-type(4) { bottom: 15%; right: 25%; width: 4px; height: 4px; opacity: 0.3; }
+  .dot:nth-of-type(5) { top: 45%; left: 12%; width: 3px; height: 3px; opacity: 0.4; }
+</style>
+</head>
+<body>
+  <div class="profile">
+    <div class="globe-ring"></div>
+    <div class="globe-ring"></div>
+    <div class="globe-ring"></div>
+    <div class="accent-line"></div>
+    <div class="accent-line horizontal"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="content">
+      <div class="icon">🌐</div>
+      <div class="title">MINUTO<span>.</span></div>
+      <div class="title">GLOBAL</div>
+      <div class="subtitle">Noticias</div>
+    </div>
+  </div>
+</body>
+</html>
